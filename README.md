@@ -1,0 +1,1 @@
+**Force PDF Inline** is a Chrome extension that intercepts HTTP responses and rewrites the `Content-Disposition` header for PDF files from `attachment` to `inline`. This ensures that PDFs always open directly in Chrome’s built-in PDF viewer in a new tab, without being forced into the Downloads folder or external applications.
