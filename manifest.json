@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Force PDF Inline",
+  "version": "0.1",
+  "description": "Forces PDFs to open inline in Chrome’s PDF viewer by rewriting Content-Disposition headers.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+
