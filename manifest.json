@@ -1,17 +1,34 @@
 {
   "manifest_version": 3,
   "name": "Force PDF Inline",
-  "version": "0.1",
-  "description": "Forces PDFs to open inline in Chrome’s PDF viewer by rewriting Content-Disposition headers.",
+  "short_name": "PDF Inline",
+  "version": "1.0.0",
+  "description": "Forces PDFs to open in Chrome's built-in viewer by rewriting Content-Disposition headers.",
+  "author": "Ahmed",
+  "homepage_url": "https://github.com/aahmadu/force-pdf-inline",
+  "minimum_chrome_version": "100",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking"
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"
   ],
-  "background": {
-    "service_worker": "background.js"
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Force PDF Inline"
   }
 }
-
